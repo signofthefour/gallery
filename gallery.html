@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery by Tag</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="header-content">
+        <a href="#" class="logo">Pinterest Clone</a>
+        <nav>
+          <ul class="nav-links">
+            <li><a href="index.html" class="nav-home">Home</a></li>
+            <li><a href="#" class="nav-explore">Explore</a></li>
+            <li><a href="#" class="nav-about">About</a></li>
+          </ul>
+        </nav>
+        <button class="back-button"><span class="loading"></span> Back to Home</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <div class="gallery-page">
+        <div class="gallery-header">
+          <h2 class="gallery-title" id="gallery-title"></h2>
+          <p class="gallery-subtitle" id="gallery-subtitle"></p>
+        </div>
+        <div class="pinterest-grid" id="pinterest-grid"></div>
+      </div>
+    </div>
+  </main>
+
+  <div class="modal" id="modal">
+    <div class="modal-content">
+      <span class="modal-close">×</span>
+      <img id="modal-image" src="" alt="Image Preview">
+    </div>
+  </div>
+
+  <script src="script.js" defer></script>
+</body>
+</html>

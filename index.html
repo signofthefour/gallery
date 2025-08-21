@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pinterest-Like Gallery</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="header-content">
+        <a href="#" class="logo">Pinterest Clone</a>
+        <div class="search-container">
+          <input type="text" class="search-input" placeholder="Search by tag...">
+          <div class="search-suggestions"></div>
+        </div>
+        <nav>
+          <ul class="nav-links">
+            <li><a href="#" class="nav-home">Home</a></li>
+            <li><a href="#" class="nav-explore">Explore</a></li>
+            <li><a href="#" class="nav-about">About</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <div class="home-page">
+        <div class="hero">
+          <h1>Explore Your Inspiration</h1>
+          <p>Discover and organize images by categories in a Pinterest-style gallery.</p>
+        </div>
+        <div class="pinterest-grid" id="home-grid"></div>
+      </div>
+    </div>
+  </main>
+
+  <div class="modal" id="modal">
+    <div class="modal-content">
+      <span class="modal-close">×</span>
+      <img id="modal-image" src="" alt="Image Preview">
+    </div>
+  </div>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
