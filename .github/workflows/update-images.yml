@@ -1,0 +1,32 @@
+name: Update images list
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - 'gallery/**'
+
+permissions:
+  contents: write
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 18
+      - run: npm install
+      - run: node generate_images_json.js
+      - name: Commit changes
+        run: |
+          if [[ `git status --porcelain images.json` ]]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "github-actions[bot]@users.noreply.github.com"
+            git add images.json
+            git commit -m "chore: update image list"
+            git push
+          fi
