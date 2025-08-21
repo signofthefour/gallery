@@ -10,6 +10,20 @@ const modalClose = document.querySelector('.modal-close');
 const searchInput = document.querySelector('.search-input');
 const searchSuggestions = document.querySelector('.search-suggestions');
 
+const lazyObserver = new IntersectionObserver((entries, observer) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const img = entry.target;
+      img.src = img.dataset.src;
+      observer.unobserve(img);
+    }
+  });
+});
+
+function observeImage(img) {
+  lazyObserver.observe(img);
+}
+
 // Fetch images from images.json
 async function fetchImages() {
   try {
@@ -60,13 +74,14 @@ async function renderHome() {
     const pinterestItem = document.createElement('div');
     pinterestItem.className = 'pinterest-item fade-in';
     pinterestItem.innerHTML = `
-      <img src="${image.src}" alt="Image">
+      <img data-src="${image.src}" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" alt="Image" class="lazy-image">
       <div class="image-info">
         <p class="image-description">${image.description}</p>
         <span class="image-tag">${image.tag}</span>
       </div>
     `;
     const img = pinterestItem.querySelector('img');
+    observeImage(img);
     img.addEventListener('click', () => showModal(image.src));
     const tag = pinterestItem.querySelector('.image-tag');
     tag.addEventListener('click', () => {
@@ -96,13 +111,14 @@ async function renderGallery(tag) {
     const pinterestItem = document.createElement('div');
     pinterestItem.className = 'pinterest-item fade-in';
     pinterestItem.innerHTML = `
-      <img src="${image.src}" alt="Image">
+      <img data-src="${image.src}" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" alt="Image" class="lazy-image">
       <div class="image-info">
         <p class="image-description">${image.description}</p>
         <span class="image-tag">${image.tag}</span>
       </div>
     `;
     const img = pinterestItem.querySelector('img');
+    observeImage(img);
     img.addEventListener('click', () => showModal(image.src));
     const tagElement = pinterestItem.querySelector('.image-tag');
     tagElement.addEventListener('click', () => {
