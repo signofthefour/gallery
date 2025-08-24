@@ -220,6 +220,41 @@
     "description": ""
   },
   {
+    "src": "gallery/My Fam/2021.jpeg",
+    "tag": "My Fam",
+    "description": ""
+  },
+  {
+    "src": "gallery/My Fam/2022.jpg",
+    "tag": "My Fam",
+    "description": ""
+  },
+  {
+    "src": "gallery/My Fam/2024.JPG",
+    "tag": "My Fam",
+    "description": ""
+  },
+  {
+    "src": "gallery/My Fam/2025.JPG",
+    "tag": "My Fam",
+    "description": ""
+  },
+  {
+    "src": "gallery/My Fam/IMG_3188.JPG",
+    "tag": "My Fam",
+    "description": ""
+  },
+  {
+    "src": "gallery/Nguyen Family/IMG_0603.jpeg",
+    "tag": "Nguyen Family",
+    "description": ""
+  },
+  {
+    "src": "gallery/Nguyen Family/big.JPG",
+    "tag": "Nguyen Family",
+    "description": ""
+  },
+  {
     "src": "gallery/Seoul/DSCF1458.JPG",
     "tag": "Seoul",
     "description": ""
@@ -375,6 +410,11 @@
     "description": ""
   },
   {
+    "src": "gallery/friends/1.jpg",
+    "tag": "friends",
+    "description": ""
+  },
+  {
     "src": "gallery/friends/487854185_4210725372484340_1973929506683624203_n.jpg",
     "tag": "friends",
     "description": ""
@@ -415,43 +455,18 @@
     "description": ""
   },
   {
-    "src": "gallery/friends/KakaoTalk_Photo_2023-04-20-13-15-55.JPG",
+    "src": "gallery/friends/DSCF0587 2.jpg",
     "tag": "friends",
     "description": ""
   },
   {
-    "src": "gallery/me_and_my_family/IMG_1936.jpeg",
-    "tag": "me_and_my_family",
+    "src": "gallery/friends/IMG_1936.jpeg",
+    "tag": "friends",
     "description": ""
   },
   {
-    "src": "gallery/me_and_my_family/IMG_3188.JPG",
-    "tag": "me_and_my_family",
-    "description": ""
-  },
-  {
-    "src": "gallery/me_and_my_family/test.JPG",
-    "tag": "me_and_my_family",
-    "description": ""
-  },
-  {
-    "src": "gallery/my_family/2021.jpeg",
-    "tag": "my_family",
-    "description": ""
-  },
-  {
-    "src": "gallery/my_family/2022.jpg",
-    "tag": "my_family",
-    "description": ""
-  },
-  {
-    "src": "gallery/my_family/2024.JPG",
-    "tag": "my_family",
-    "description": ""
-  },
-  {
-    "src": "gallery/my_family/2025.JPG",
-    "tag": "my_family",
+    "src": "gallery/friends/KakaoTalk_Photo_2023-04-20-13-15-55.JPG",
+    "tag": "friends",
     "description": ""
   },
   {
