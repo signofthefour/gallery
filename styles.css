@@ -147,6 +147,41 @@ header {
     background: #f3f4f6;
 }
 
+/* Explore Tags */
+.explore-tags {
+    position: fixed;
+    top: 72px;
+    left: 0;
+    right: 0;
+    background: #fff;
+    border-top: 1px solid #e5e7eb;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 16px;
+    display: none;
+    flex-wrap: wrap;
+    gap: 12px;
+    z-index: 150;
+}
+
+.explore-tags.active {
+    display: flex;
+}
+
+.explore-tag {
+    background: #f3f4f6;
+    border-radius: 16px;
+    padding: 6px 12px;
+    cursor: pointer;
+    font-size: 14px;
+    color: #2f2f2f;
+    text-transform: capitalize;
+    transition: background 0.2s ease;
+}
+
+.explore-tag:hover {
+    background: #e5e7eb;
+}
+
 /* Main Content */
 main {
     min-height: calc(100vh - 200px);
