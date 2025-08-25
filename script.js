@@ -11,6 +11,8 @@ const searchInput = document.querySelector('.search-input');
 const searchSuggestions = document.querySelector('.search-suggestions');
 const loadMoreHome = document.getElementById('load-more-home');
 const loadMoreGallery = document.getElementById('load-more-gallery');
+const exploreButton = document.querySelector('.nav-explore');
+const exploreTags = document.getElementById('explore-tags');
 
 const ITEMS_PER_PAGE = 20;
 let homeImages = [];
@@ -254,6 +256,43 @@ async function setupSearch() {
   }
 }
 
+function setupExplore() {
+  if (!exploreButton || !exploreTags) {
+    console.log('Explore elements not found, skipping setupExplore');
+    return;
+  }
+
+  exploreButton.addEventListener('click', async (e) => {
+    e.preventDefault();
+    if (exploreTags.classList.contains('active')) {
+      exploreTags.classList.remove('active');
+      return;
+    }
+    const tags = await fetchTags();
+    exploreTags.innerHTML = '';
+    if (tags.length === 0) {
+      exploreTags.innerHTML = '<p>No tags available.</p>';
+    } else {
+      tags.forEach(tag => {
+        const tagEl = document.createElement('div');
+        tagEl.className = 'explore-tag';
+        tagEl.textContent = tag;
+        tagEl.addEventListener('click', () => {
+          window.location.href = `gallery.html?tag=${encodeURIComponent(tag)}`;
+        });
+        exploreTags.appendChild(tagEl);
+      });
+    }
+    exploreTags.classList.add('active');
+  });
+
+  document.addEventListener('click', (e) => {
+    if (!e.target.closest('.nav-explore') && !e.target.closest('#explore-tags')) {
+      exploreTags.classList.remove('active');
+    }
+  });
+}
+
 // Initialize based on page
 async function init() {
   const urlParams = new URLSearchParams(window.location.search);
@@ -276,4 +315,5 @@ async function init() {
   }
 }
 
+setupExplore();
 init();
